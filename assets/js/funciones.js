@@ -12,8 +12,8 @@ function crearLista() {
   var boton = document.createElement("input");
   boton.value = 'CREAR PENDIENTE';
   boton.type = 'button';
-  //boton.onclick = function () {crearPendienteNuevo()};
-  boton.onclick = "crearPendienteNuevo";
+  boton.onclick = function () {crearPendienteNuevo()};
+  //boton.onclick = "crearPendienteNuevo";
   nuevaLista.appendChild(boton);
 
   //INPUT QUE APARECE CUANDO LA LISTA SE CREA//
@@ -22,29 +22,29 @@ function crearLista() {
   input.type = "text";
   input.id = "agregarNuevoPendiente";
 
+  // ul LISTA PARA QUE APAREZCA EN LA LISTA//
+  var listaNueva = document.createElement("ul");
+  listaNueva.id = "listaNuevaPublicar";
+
+  document.getElementById('lista').appendChild(listaNueva)
   document.getElementById("lista").appendChild(input);
   document.getElementById('lista').appendChild(boton);
 
-  /*PROBANDO EL CREATETEXTNODE
-  var lista = document.getElementById('nombreLista').value;
-  //console.log(lista)
-  var nuevaLista = document.createElement("p");
-  var texto= document.createTextNode(lista);
-  publicarLista.appendChild(texto);
-  //publicarLista.innerHTML= lista*/
 }
+
+//FUNCIONA PARA LA "LISTA PARA CREAR"//
 function crearPendienteNuevo(){
   var pendiente = document.getElementById('agregarNuevoPendiente').value;
   if(pendiente != ""){
-    var nuevoPendiente = document.createElement("p");
+    var nuevoPendiente = document.createElement("li");
     nuevoPendiente.innerHTML = pendiente;
-    document.getElementById("lista").appendChild(nuevoPendiente);
+    document.getElementById("listaNuevaPublicar").appendChild(nuevoPendiente);
     //BORRAR CASILLA//
     document.getElementById('agregarNuevoPendiente').value = "";
   }
 }
 
-//FUNCIONA EN LA LISTA DE EJEMPLO//
+//FUNCIONA EN LA "LISTA DE EJEMPLO"//
 function crearPendiente(){
   var pendiente = document.getElementById('agregarPendiente').value;
   if(pendiente != ""){
