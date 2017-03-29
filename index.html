@@ -3,9 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      section{
+        border:purple 2px dotted;
+        background:#F5E3F8;
+      }
+    </style>
   </head>
   <body>
-
+    <h1> T R E L L ☼  </h1>
+  <!-- EJEMPLO DE LISTA DE PENDIENTE -->
+    <section id="listaEjemplo">
+      <h3>Pendintes de la semana</h3>
+      <ul>
+        <li>Dormir</li>
+        <li>Comer helado</li>
+      </ul>
+      <input type="text" placeholder="Agregar pendiente" id="agregarPendiente">
+      <button type="button"  onclick="crearPendiente()">CREAR PENDIENTE</button>
+    </section>
+  <!-- AGREGAR LISTA -->
+    <div class="crearLista">
+      <h3>Agregar lista:</h3>
+      <input type="text" placeholder="Nombre de la lista" id="">
+      <button type="button" onclick="crearLista()">CREAR LISTA</button>
+    </div>
   <script src="assets/js/funciones.js"></script>
   </body>
 </html>
