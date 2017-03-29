@@ -8,6 +8,10 @@ function crearLista() {
   //BORRA LA CASILLA//
   document.getElementById('nombreLista').value = "";
 
+  /*var seccion = document.createElement("section");
+  seccion.id = "lista";
+  document.getElementById("lista").appendChild("lista");*/
+
   //BOTON QUE APARECE CUANDO LA LISTA SE CREA//
   var boton = document.createElement("input");
   boton.value = 'CREAR PENDIENTE';
@@ -26,13 +30,14 @@ function crearLista() {
   var listaNueva = document.createElement("ul");
   listaNueva.id = "listaNuevaPublicar";
 
-  document.getElementById('lista').appendChild(listaNueva)
+  document.getElementById('lista').appendChild(listaNueva);
   document.getElementById("lista").appendChild(input);
   document.getElementById('lista').appendChild(boton);
 
 }
 
 //FUNCIONA PARA LA "LISTA PARA CREAR"//
+//creo que se tendrian que llamar la ul por getElementsByTagName
 function crearPendienteNuevo(){
   var pendiente = document.getElementById('agregarNuevoPendiente').value;
   if(pendiente != ""){
@@ -44,6 +49,7 @@ function crearPendienteNuevo(){
   }
 }
 
+//PRUEBA DE LA FUNCION//
 //FUNCIONA EN LA "LISTA DE EJEMPLO"//
 function crearPendiente(){
   var pendiente = document.getElementById('agregarPendiente').value;
