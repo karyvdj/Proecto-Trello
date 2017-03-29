@@ -2,13 +2,21 @@
 function crearLista() {
   var lista = document.getElementById('nombreLista').value;
   //console.log(lista)
-  var nuevaLista = document.createElement("selection");
+  var nuevaLista = document.createElement("h3");
   nuevaLista.innerHTML = lista;
   document.getElementById('lista').appendChild(nuevaLista);
+  //borrar casilla//
+  document.getElementById('nombreLista').value = "";
 
-  /*var lista = document.getElementById('nombreLista').value;
+  var boton = document.createElement("button");
+  var input = document.createElement("input");
+  document.getElementById("lista").appendChild(input);
+  document.getElementById('lista').appendChild(boton);
+
+  /*Probando el createTextNode
+  var lista = document.getElementById('nombreLista').value;
   //console.log(lista)
-  var publicarLista = document.createElement("p");
+  var nuevaLista = document.createElement("p");
   var texto= document.createTextNode(lista);
   publicarLista.appendChild(texto);
   //publicarLista.innerHTML= lista*/
