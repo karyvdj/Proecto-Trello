@@ -2,16 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Poyecto Sprint 2. Version 2</title>
+    <title>TRELLO. Version 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,700" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/AJonc96g.ico">
     <style>
+      body{
+        font-family: Helvetica;
+        color: #595356;
+      }
+      header{
+        background: #AC2863;
+        padding: 10px;
+        font-family: 'Pacifico', cursive;
+        color: #EDADC9;
+        font-size:20px;
+        text-align: center;
+      }
+      body{
+        background: #D5347C;
+      }
       section{
-        border:purple 2px dotted;
+        width: 300px;
+        height: 100px;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 15px;
         background:#F5E3F8;
+      }
+      input{
+        margin-top: 20px;
+        height: 20px;
       }
     </style>
   </head>
   <body>
-    <h1> T R E L L O </h1>
+    <header>
+      <h1> Trello </h1>
+    </header>
+    <input type="text" id="nombreLista" placeholder="Nombre de lista"/>
+    <input type="submit" id="crearListaObjeto" onclick="crearLista()"/>
     <article id="contenedorLista">
   <!-- EJEMPLO DE LISTA DE PENDIENTES -->
       <section>
@@ -22,9 +51,7 @@
         </ul>
       </section>
     </article>
-    <input type="text" id="nombreLista" placeholder="Nombre de lista"/>
-    <input type="submit" id="crearListaObjeto" onclick="crearLista()"/>
-
-    <script src="trello.js"></script>
+    
+    <script src="assets/js/trello.js"></script>
   </body>
 </html>
